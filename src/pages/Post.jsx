@@ -1,0 +1,17 @@
+import React from 'react';
+import { posts } from "../data";
+import { useLocation } from 'react-router-dom';
+const Post = () => {
+    
+    const location = useLocation()
+    const path = location.pathname.split('/')[2]
+    const post = posts.find(p=> p.id.toString() === path)
+    return(
+        <div className="postcard">
+        <img src={post.image} alt="postimage" className="img" />
+        <p className="postdescription">{post.description}</p>
+        <p className="postlongdescription">{post.longDescription}</p>
+    </div>
+    )
+}
+export default Post;
