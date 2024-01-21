@@ -1,0 +1,2 @@
+# fullstack_social_auth_client
+reactExpressAuthFrontend
